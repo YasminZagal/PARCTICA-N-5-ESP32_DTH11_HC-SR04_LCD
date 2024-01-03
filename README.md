@@ -106,12 +106,12 @@ void loop()
 2. Instalar la libreria de **Cristal líquido I2C** **DTH sensor library for ESPx**. 
    - Seleccionar pestaña de Librery Manager --> Add a New library --> Colocamos el nombre de libreria 
 
-![]()
+![](https://github.com/YasminZagal/PARCTICA-N-5-ESP32_DTH11_HC-SR04_LCD/blob/main/librerias%20practica5.png)
 
 
 3. Realizar la conexion de **HC-SR04**, **LCD** y **DTH22** con la **ESP32** de la siguiente manera.
 
-![]()
+![](https://github.com/YasminZagal/PARCTICA-N-5-ESP32_DTH11_HC-SR04_LCD/blob/main/conexiones%20practica%205.png)
 
   **Conexion lcd**
   -GND
@@ -125,7 +125,7 @@ void loop()
   -ECHO --> esp:15
   -GND  --> GND
   
-. **Conexión DTH22**
+  **Conexión DTH22**
   -VCC --> 3V
   -SDA --> esp:15
   -NC 
@@ -138,12 +138,13 @@ void loop()
 3. Colocar distancia *doble click* al sensor **HC-SR04**
 4. Colocar temperatura y humedad *doble click* al sensor **DTH22**
 
-![]()
+![](https://github.com/YasminZagal/PARCTICA-N-5-ESP32_DTH11_HC-SR04_LCD/blob/main/sensor%20ultrasonico.png)
+![](https://github.com/YasminZagal/PARCTICA-N-5-ESP32_DTH11_HC-SR04_LCD/blob/main/sensor%20DHT22.png)
   
 ## Resultados
 
 Una vez terminado iniciamos simulacion y se observaran los valores de la humedad y temperatura como la distancia en cm en la lcd.
 Ademas de que en la LCD aparece nuestro nombre y carrera 
 
-![]()
-![]()
+![](https://github.com/YasminZagal/PARCTICA-N-5-ESP32_DTH11_HC-SR04_LCD/blob/main/resultado%20practica5.png)
+![](https://github.com/YasminZagal/PARCTICA-N-5-ESP32_DTH11_HC-SR04_LCD/blob/main/LCD%20personalizado.png)
