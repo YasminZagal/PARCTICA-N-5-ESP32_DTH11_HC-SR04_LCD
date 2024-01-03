@@ -1,6 +1,6 @@
 # PARCTICA-N-5-ESP32_DTH22_HC-SR04_LCD
 
-Este repositorio muestra la quinta practica del diplomado de como podemos programar una ESP32 con el sensor ultrasonico HC-SR04,sensor DTH22  y mostrando la distancia en cm, así como la temperatura y humedad en la LCD.
+Este repositorio muestra la quinta practica del diplomado de como podemos programar una ESP32 con el sensor ultrasonico HC-SR04 mostrando la distancia en cm y un sensor DTH22  que muestra temperatura y humedad en la LCD.
 
 ## Introducción
 
