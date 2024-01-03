@@ -124,6 +124,7 @@ void loop()
   -TRIG --> esp:4
   -ECHO --> esp:15
   -GND  --> GND
+  
 . **Conexión DTH22**
   -VCC --> 3V
   -SDA --> esp:15
