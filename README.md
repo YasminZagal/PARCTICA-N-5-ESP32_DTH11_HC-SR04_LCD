@@ -6,7 +6,7 @@ Este repositorio muestra la quinta practica del diplomado de como podemos progra
 
 ### Descripción
 
-La ```Esp32``` la utilizamos en un entorno de adquision de datos, lo cual en esta practica ocuparemos un sensor (```Ultrasonico HC-SR04```)  medicion de distancia, ademas agrgaremos un (```LCD 16X2 I2C```) para mostrar los resultados en la pantalla lcd; Esta practica se usara un simulador llamado [WOKWI](https://wokwi.com/).
+La ```Esp32``` la utilizamos en un entorno de adquision de datos, lo cual en esta practica ocuparemos un sensor (```Ultrasonico HC-SR04```)  medicion de distancia, añidimos un sensor (```DTH22```) para la obtención de datos de temperatura y humedad, ademas agrgaremos un (```LCD 16X2 I2C```) para mostrar los resultados en la pantalla lcd; Esta practica se usara un simulador llamado [WOKWI](https://wokwi.com/).
 
 
 ## Material Necesario
