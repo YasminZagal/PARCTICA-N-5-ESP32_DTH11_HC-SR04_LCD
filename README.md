@@ -121,7 +121,7 @@ void loop() {
   **Conexión HC-SR04**
   -VCC --> 5V
   -TRIG --> esp:4
-  -ECHO --> esp:15
+  -ECHO --> esp:2
   -GND  --> GND
   
   **Conexión DTH22**
