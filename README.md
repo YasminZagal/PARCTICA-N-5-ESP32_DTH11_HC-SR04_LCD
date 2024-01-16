@@ -39,41 +39,33 @@ Para realizar la practica de este repositorio se necesita entrar a la plataforma
 #define LCD_COLUMNS 20
 #define LCD_LINES   4
 
-const int Trigger = 4;   //Pin digital 2 para el Trigger del sensor
-const int Echo = 15;   //Pin digital 3 para el Echo del sensor
 const int DHT_PIN = 15;
+const int Trigger = 4;   //Pin digital 2 para el Trigger del sensor
+const int Echo = 2;   //Pin digital 3 para el Echo del sensor
 
 DHTesp dhtSensor;
 
 LiquidCrystal_I2C lcd(I2C_ADDR, LCD_COLUMNS, LCD_LINES);
 
 void setup() {
-  Serial.begin(9600);//iniciailzamos la comunicación
+
+  Serial.begin(115200);
+  dhtSensor.setup(DHT_PIN, DHTesp::DHT22);
   pinMode(Trigger, OUTPUT); //pin como salida
   pinMode(Echo, INPUT);  //pin como entrada
   digitalWrite(Trigger, LOW);//Inicializamos el pin con 0
-  Serial.begin(115200);
-  dhtSensor.setup(DHT_PIN, DHTesp::DHT22);
   lcd.init();
   lcd.backlight();
+
 }
 
-void loop()
-{
+void loop() {
 
   TempAndHumidity  data = dhtSensor.getTempAndHumidity();
   Serial.println("Temp: " + String(data.temperature, 1) + "°C");
   Serial.println("Humidity: " + String(data.humidity, 1) + "%");
   Serial.println("---");
   
-  lcd.setCursor(0, 0);
-  lcd.print("  Temp: " + String(data.temperature, 1) + "\xDF"+"C  ");
-  lcd.setCursor(0, 1);
-  lcd.print(" Humidity: " + String(data.humidity, 1) + "% ");
-  lcd.print("Wokwi Online IoT");
-
-  delay(1000);
-
   long t; //timepo que demora en llegar el eco
   long d; //distancia en centimetros
 
@@ -84,15 +76,21 @@ void loop()
   t = pulseIn(Echo, HIGH); //obtenemos el ancho del pulso
   d = t/59;             //escalamos el tiempo a una distancia en cm
   
-  Serial.println("Distancia: ");
+  Serial.print("Distancia: ");
   Serial.print(d);      //Enviamos serialmente el valor de la distancia
-  Serial.println("cm");
+  Serial.print("cm");
+  Serial.println();
 
   lcd.clear();
   lcd.setCursor(0, 0);
-  lcd.print("Distancia: " + String(d)+ "cm");
-  delay(1000);          //Hacemos una pausa de 100ms
-
+  lcd.print("  Temp: " + String(data.temperature, 1) + "\xDF"+"C  ");
+  lcd.setCursor(0, 1);
+  lcd.print(" Humidity: " + String(data.humidity, 1) + "% ");
+  delay(2000);
+  lcd.clear();
+  lcd.setCursor(0,0);
+  lcd.print("Distancia: " + String(d) + "cm");
+  delay(2000);
   lcd.clear();
   lcd.setCursor(0, 0);
   lcd.print("  Yasmin Zagal    ");
@@ -100,6 +98,7 @@ void loop()
   lcd.print("      IEE     ");
   delay(2000);
 }
+
 ```
 
 
